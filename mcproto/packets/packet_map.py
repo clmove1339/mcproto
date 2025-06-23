@@ -29,6 +29,7 @@ MODULE_PATHS = {
     GameState.HANDSHAKING: "mcproto.packets.handshaking",
     GameState.STATUS: "mcproto.packets.status",
     GameState.LOGIN: "mcproto.packets.login",
+    GameState.CONFIGURATION: "mcproto.packets.configuration",
     GameState.PLAY: "mcproto.packets.play",
 }
 

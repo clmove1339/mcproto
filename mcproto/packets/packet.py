@@ -25,7 +25,8 @@ class GameState(IntEnum):
     HANDSHAKING = 0
     STATUS = 1
     LOGIN = 2
-    PLAY = 3
+    CONFIGURATION = 3
+    PLAY = 4
 
 
 class PacketDirection(IntEnum):
@@ -143,6 +144,8 @@ class InvalidPacketContentError(IOError):
             msg_parts.append("status")
         elif self.game_state is GameState.LOGIN:
             msg_parts.append("login")
+        elif self.game_state is GameState.CONFIGURATION:
+            msg_parts.append("configuration")
         else:
             msg_parts.append("play")
 
